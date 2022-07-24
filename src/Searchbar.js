@@ -13,6 +13,7 @@ return (
         onSubmit={(e)=>e.preventDefault()}
         >
         <input 
+        className="search"
         placeholder="Search for a character"
         value={text}
         onChange={e=>onChange(e.target.value)}

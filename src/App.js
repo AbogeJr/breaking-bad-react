@@ -1,10 +1,8 @@
-// import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from "react"
 import Results from "./Results"
 import Searchbar from './Searchbar';
 import Header from "./Header"
-const axios = require('axios')
 
 function App() {
   const [characters, setCharacters] = useState([])
@@ -13,15 +11,19 @@ function App() {
 
   useEffect(() => {
     const getCharacters = async() => {
-      axios.get(`https://www.breakingbadapi.com/api/characters?name=${query}`)
-      .then(response => {
-        const data = response.data
-        // console.log(data)
-        setCharacters(data)
-        setIsLOading(false)
-      })
+      const response = await fetch(`https://www.breakingbadapi.com/api/characters?name=${query}`)
+      if(response.status!==200){
+        throw new Error(`${response.status} : ${response.statusText}`)
+      }
+      const data = await response.json()
+      return data
     }
-    getCharacters()
+    getCharacters().then(data=>{
+      setCharacters(data)
+      setIsLOading(false)
+    }).catch(err=>{
+      console.log(err.message)
+    })
   }, [query])
 
   return (

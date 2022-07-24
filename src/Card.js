@@ -11,8 +11,8 @@ function Card ({character}) {
                     <img src="https://149360821.v2.pressablecdn.com/wp-content/uploads/2019/09/Breaking-Bad-Logo.jpg" className="card-logo" alt=""/>
                     <h2>{name}</h2>
                     <h4>a.k.a {nickname}</h4>
-                    <p>{portrayed}</p>
-                    {occupation.map((occ)=><span>{occ} | </span>)}
+                    <p>Portrayed by: {portrayed}</p>
+                    {occupation.map((occ,index)=><span key={index}>| {occ} </span>)}
                 </div>
             </div>
         </div>
