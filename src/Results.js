@@ -1,9 +1,10 @@
 import Card from "./Card"
+import Spinner from  "./Spinner"
 
 function Results ({characters, isLoading}) {
     return(
         <div className="results-grid">
-        {isLoading ? <h1>Loading...</h1> : characters.map(
+        {isLoading ? <Spinner /> : characters.map(
             (character) => <Card key={character.char_id} character={character} />
         )}
         </div>

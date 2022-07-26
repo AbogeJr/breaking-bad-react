@@ -6,7 +6,7 @@ import Header from "./Header"
 
 function App() {
   const [characters, setCharacters] = useState([])
-  const [isLoading, setIsLOading] = useState(false)
+  const [isLoading, setIsLOading] = useState(true)
   const [query, setQuery] = useState("")
 
   useEffect(() => {
