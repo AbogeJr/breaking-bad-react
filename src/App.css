@@ -103,8 +103,8 @@ img {
 .flip-card {
     background-color: transparent;
     margin: auto;
-    width: 245px;
-    height: 350px;
+    width: 225px;
+    height: 330px;
     perspective: 1000px; 
     cursor:pointer;
     /* box-shadow: inset 0px 0px 25px grey; */
