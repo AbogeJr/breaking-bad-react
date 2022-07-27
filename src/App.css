@@ -131,7 +131,6 @@ img {
 }
   
 .flip-card-front {
-    /* background-image: url("https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg"); */
     background-size: cover;
     background-position: center;
     background-color: #bbb;
@@ -154,14 +153,14 @@ img {
     row-gap: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly
+    justify-content: center;
     /* grid-template-columns: auto auto auto auto auto; */
 }
 
 .search {
     border: 1px solid #333;
     padding: 15px;
-    width: 30%;
+    width: 400px;
     margin-bottom: 20px;
     background:#222;
     color:white;
